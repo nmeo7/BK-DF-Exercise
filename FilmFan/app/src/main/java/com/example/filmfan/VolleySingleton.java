@@ -56,10 +56,5 @@ public class VolleySingleton {
         getRequestQueue().add(req);
     }
 
-    public ImageLoader getImageLoader() {
-        return imageLoader;
-    }
-
-
 }
 

@@ -52,7 +52,7 @@ public class DetailsFragment extends Fragment implements RatingBar.OnRatingBarCh
     public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
         Log.i(TAG, "onRatingChanged: " + rating);
 
-        Movie m = Movie.getInstance (getActivity()); //  new Movie( getActivity() );
+        Movie m = Movie.getInstance (getActivity());
 
         Intent intent = getActivity().getIntent();
         int movieId = intent.getIntExtra(MOVIE_ID_TOKEN, 0);

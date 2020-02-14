@@ -2,8 +2,6 @@ package com.example.filmfan;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,11 +15,7 @@ import android.widget.TextView;
 import com.google.android.material.snackbar.Snackbar;
 import com.squareup.picasso.Picasso;
 
-import java.io.InputStream;
-import java.net.URL;
 import java.util.ArrayList;
-
-import static com.example.filmfan.DetailsActivity.MOVIE_ID_TOKEN;
 
 public class MovieAdapter extends ArrayAdapter<Movie> implements View.OnClickListener{
 

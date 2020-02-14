@@ -20,7 +20,6 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 
 public class Movie implements Comparable {
@@ -28,6 +27,7 @@ public class Movie implements Comparable {
     private static Movie thisMovie;
 
     private final String BASE_URL = "https://api.themoviedb.org/3/";
+    private final String IMAGE_URL = "https://image.tmdb.org/t/p/w500";
     private final String API_KEY = "bd2803c693505ef0ab0bdf221ce6e525";
     private String SESSION_ID = "028964ad2ed5cd74f506b80e3368d46761c60515";
     private String RESOURCE_LAN = "&language=fr-FR";
@@ -186,7 +186,7 @@ public class Movie implements Comparable {
                                         title2,
                                         "Release date: " + movie.getString("release_date"),
                                         movie.getString("vote_average"),
-                                        "https://image.tmdb.org/t/p/w500" + movie.getString("poster_path"),
+                                        IMAGE_URL + movie.getString("poster_path"),
                                         "", "", "" ) );
                         Log.i(TAG, "onResponse: " + response.getJSONArray("results").get(i).toString());
                     }
@@ -385,7 +385,7 @@ public class Movie implements Comparable {
                     details_release_year.setText(releaseDate);
                     details_details.setText( details );
 
-                    String url = "https://image.tmdb.org/t/p/original";
+                    String url = IMAGE_URL;
                     url = url.concat(response.getString("poster_path"));
 
                     Picasso.get().load(url).into(details_cover);

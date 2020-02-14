@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.filmfan.DetailsFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_details" />
+
+    <fragment
+        android:id="@+id/navigation_actors"
+        android:name="com.example.filmfan.ListFragment"
+        android:label="@string/title_actors"
+        tools:layout="@layout/fragment_list" >
+
+        <argument
+            android:name="myArg"
+            app:argType="integer"
+            android:defaultValue="5" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_similar"
+        android:name="com.example.filmfan.ListFragment"
+        android:label="@string/title_similar"
+        tools:layout="@layout/fragment_list" >
+
+        <argument
+            android:name="myArg"
+            app:argType="integer"
+            android:defaultValue="4" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_recommendations"
+        android:name="com.example.filmfan.ListFragment"
+        android:label="@string/title_recommendations"
+        tools:layout="@layout/fragment_list" >
+
+        <argument
+            android:name="myArg"
+            app:argType="integer"
+            android:defaultValue="3" />
+
+    </fragment>
+</navigation>
